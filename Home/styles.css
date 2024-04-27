@@ -1,0 +1,57 @@
+header h1 {
+  color: rgb(31, 185, 139);
+}
+body {
+  background: #202935;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+.container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+.card {
+  width: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+}
+.card img {
+  width: 100%;
+  height: auto;
+}
+.card-content {
+  padding: 10px;
+}
+.card-content h3 {
+  font-size: 30px;
+  margin-bottom: 9px;
+}
+.card-content p {
+  color: rgb(3, 179, 126);
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.card-content .button {
+  color: #4c4335;
+  padding: 5px 16px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 3px solid;
+  background: linear-gradient(to bottom, #ac8851c0, #d5af7745);
+}
+
+.card-content .button:hover {
+  border-width: 3px;
+  border-color: #4c4335;
+  box-shadow: 0 0 20px rgba(58, 54, 53, 0.915);
+  transition: 0.3s;
+  background: linear-gradient(to bottom, #b0813ac0, #d5af7745);
+}

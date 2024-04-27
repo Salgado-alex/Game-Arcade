@@ -1,0 +1,177 @@
+header {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+header h1 a {
+  margin-right: auto;
+  margin-left: 30px;
+  color: rgb(31, 185, 139);
+  text-decoration: none;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #202935;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+#paragraph {
+  color: #7a684b;
+}
+
+/* Style for hidden input field */
+.input-field {
+  opacity: 0;
+  z-index: -999;
+  position: absolute;
+}
+
+/* Style for the content box */
+.content-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 8% 20px;
+}
+
+/* Style for text in typing area */
+.typing-text p {
+  font-size: 30px;
+  text-align: justify;
+  letter-spacing: 1px;
+  word-break: break-all;
+}
+
+/* style for the cursor within the typing text */
+.typing-text p span {
+  position: relative;
+}
+
+/* Style for correct words in text */
+.typing-text p span.correct {
+  color: rgb(31, 185, 139);
+}
+
+/* Style for incorrect words in text */
+.typing-text p span.incorrect {
+  color: #c71a1a;
+  border-radius: 4px;
+}
+
+/* Style for the active cursor within the typing text */
+.typing-text p span.active::before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 103%;
+  opacity: 1;
+  background-color: #8f722b75;
+}
+
+.reset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+}
+
+.reset button {
+  color: rgb(31, 185, 139);
+  padding: 10px 10px 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 15px;
+  background: linear-gradient(to bottom, #282c4cc0, #d5af7745);
+}
+
+/* Style for the button on hover */
+.reset button:hover {
+  border-width: 3px;
+  border-color: #4c4335;
+  box-shadow: 0 0 20px rgba(205, 192, 189, 0.915);
+  transition: 0.3s;
+  background: linear-gradient(to bottom, #282c4cc0, #d5af7745);
+}
+
+/* Style for the container of result-details */
+.content .result-details {
+  display: flex;
+  justify-content: center;
+  column-gap: 100px;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Style for list items with a box around each item */
+.result-details li {
+  font-size: 20px;
+  display: flex;
+
+  border-radius: 5px;
+  padding: 0px 20px 0px;
+  text-align: center;
+  color: rgb(31, 185, 139);
+  background: linear-gradient(to bottom, #282c4cc0, #d5af7745);
+}
+
+/* Style for text in list items */
+.result-details li span {
+  display: flex;
+  font-size: 30px;
+  margin-left: 10px;
+  margin-top: 12px;
+  text-align: center;
+}
+
+@media (max-width: 650px) {
+  header {
+    font-size: 15px;
+    padding: 5px;
+  }
+
+  header h1 a {
+    margin-left: 10px;
+    font-size: 16px;
+  }
+
+  .content-box {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .typing-text p {
+    font-size: 18px;
+    letter-spacing: 0.5px;
+  }
+  .typing-text p span.active::before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 100%;
+  }
+
+  .content .result-details {
+    flex-direction: column;
+    column-gap: 5px;
+  }
+
+  .result-details li {
+    font-size: 13px;
+    padding: 0px 5px;
+    border-radius: 5px;
+    margin: 7px;
+  }
+  .result-details li span {
+    font-size: 15px;
+  }
+
+  .reset button {
+    font-size: 16px;
+    padding: 8px;
+  }
+}

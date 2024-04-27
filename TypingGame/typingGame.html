@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Game</title>
+    <link rel="stylesheet" href="typingGame.css" />
+  </head>
+  <body>
+    <header>
+      <h1><a id="Home" href="../Home/index.html">Game Arcade</a></h1>
+    </header>
+    <div class="wrapper">
+      <div class="content">
+        <ul class="result-details">
+          <li class="time">
+            <p>Time Left:</p>
+            <span><strong>60</strong>s</span>
+          </li>
+          <li class="accuracy">
+            <p>Accuracy:</p>
+            <span><strong>100</strong>%</span>
+          </li>
+          <li class="wpm">
+            <p>WPM:</p>
+            <span><strong>0</strong></span>
+          </li>
+        </ul>
+        <div class="reset">
+          <button>Try Again</button>
+        </div>
+      </div>
+      <input type="text" class="input-field" />
+      <div class="content-box">
+        <div class="typing-text">
+          <p id="paragraph"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="typingGame.js" defer></script>
+  </body>
+</html>
