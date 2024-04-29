@@ -1,0 +1,3 @@
+[submodule "tetr.js"]
+	path = tetr.js
+	url = https://github.com/simonlc/tetr.js.git
