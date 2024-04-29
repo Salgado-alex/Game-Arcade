@@ -11,6 +11,10 @@ header h1 a {
   text-decoration: none;
 }
 
+header h1 a:hover {
+  color: #ffcc00;
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: #202935;
@@ -122,6 +126,7 @@ body {
 /* Style for text in list items */
 .result-details li span {
   display: flex;
+
   font-size: 30px;
   margin-left: 10px;
   margin-top: 12px;
@@ -130,13 +135,12 @@ body {
 
 @media (max-width: 650px) {
   header {
-    font-size: 15px;
     padding: 5px;
   }
 
   header h1 a {
     margin-left: 10px;
-    font-size: 16px;
+    font-size: 25px;
   }
 
   .content-box {
@@ -156,18 +160,18 @@ body {
   }
 
   .content .result-details {
-    flex-direction: column;
+    flex-wrap: wrap;
     column-gap: 5px;
   }
 
   .result-details li {
-    font-size: 13px;
-    padding: 0px 5px;
+    font-size: 15px;
+    padding: 5px 10px;
     border-radius: 5px;
-    margin: 7px;
+    margin: 20px;
   }
   .result-details li span {
-    font-size: 15px;
+    font-size: 20px;
   }
 
   .reset button {
