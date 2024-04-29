@@ -106,8 +106,11 @@ a:visited {
     body {
       background: radial-gradient(#130237, #AE0EA0);
     }
-    card {
-        width: 100px;
+    .card {
+        width: 150px;
+    }
+    .card-content {
+      height: 100px;
     }
     h1{
       font-size: 50px;
