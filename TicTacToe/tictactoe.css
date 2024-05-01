@@ -1,6 +1,6 @@
 body {
   font-family: monospace;
-  background: rgb(0, 0, 0);
+  background: radial-gradient(#130237, #AE0EA0);
   text-align: center;
   margin: 0;
   padding: 0;
@@ -21,13 +21,13 @@ header h1 {
 
 header h1 a {
   text-decoration: none;
-  color: rgb(31, 185, 139);
+  color: white;
   transition: color 0.3s;
 }
 
-header h1 a:hover {
-  color: #ffcc00;
-}
+/* header h1 a:hover {
+  color: white;
+} */
 
 #gameContainer {
   padding: 30px;
@@ -132,7 +132,7 @@ header h1 a:hover {
 footer {
   position: absolute;
   bottom: 0px;
-  color: rgb(31, 185, 139);
+  color: white;
   padding: 20px;
   width: 100%;
 }

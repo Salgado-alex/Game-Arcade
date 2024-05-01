@@ -35,7 +35,7 @@ html {
 body {
   font: 1em 'Source Sans Pro';
   margin: 0;
-  background: #000;
+  background: radial-gradient(#130237, #AE0EA0);;
   background-size: cover;
   color: #fff;
 }
@@ -106,7 +106,7 @@ nav a {
 #content {
   display: table;
   margin: auto;
-  background: rgba(0,0,0,0.7);
+  background: black;
 }
 
 /* Canvases */
