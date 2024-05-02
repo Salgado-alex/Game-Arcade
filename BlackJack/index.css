@@ -1,7 +1,7 @@
 body {
     font-family: 'DM Serif Display', serif;
     font: bold;
-    background-image: url(images/10081440.jpg);
+    background-image: url(images/BlackJackBG.jpg)  ;
     background-size: cover;
     color: white;
 }
@@ -11,18 +11,32 @@ body {
     text-align: center;
     font-size: 120px;
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 #message-el{
     text-align: center;
     font-size: 70px;
+    margin-top: 0;
+    color: pink;
 }
+
+.players{
+    background-color: pink;
+    padding: 30px;
+    color: #400258;
+    border-radius: 10px;
+    box-shadow: 8px 8px 8px #160236;
+}
+
 #player  {
     font-size: 55px;
+    color: #400258;
 }
 
 #dealer {
     font-size: 55px;
+    color: #400258;
 }
 
 .container {
@@ -40,37 +54,9 @@ body {
     align-items: center;
 }
 
-#hit-btn {
+#hit-btn, #stay-btn, #newGame-btn {
     background-color: pink;
-    color: purple;
-    cursor: pointer;
-    width: 11.5%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border: none;
-    border-radius: 2px;
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-#stay-btn {
-    background-color: pink;
-    color: purple;
-    cursor: pointer;
-    width: 11.5%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border: none;
-    border-radius: 2px;
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-#newGame-btn {
-    background-color: pink;
-    color: purple;
+    color: #400258;
     cursor: pointer;
     width: 11.5%;
     padding-top: 5px;
@@ -84,16 +70,17 @@ body {
 
 a{
     background-color: pink;
-    color: purple;
+    color: #400258;
     cursor: pointer;
     width: 11.5%;
     padding-top: 5px;
     padding-bottom: 5px;
     text-align: center;
 }
+
 #return-btn {
     background-color: pink;
-    color: purple;
+    color: #400258;
     cursor: pointer;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -101,13 +88,67 @@ a{
     border-radius: 2px;
     font-size: 25px;
     font-weight: bold;
-   
+}
+
+#hit-btn:hover, #stay-btn:hover, #newGame-btn:hover{
+    box-shadow: 10px 10px 10px black;
 }
 
 footer {
     margin-top: 2%;
     text-align: center;
+    color: pink;
 }
 
+/* Make it responsive for mobile */
+@media(max-width: 600px){
+ 
+    #title {
+        font-size: 55px;
+    }
+    #message-el{
+        text-align: center;
+        font-size: 30px;
+    }
 
+    .players{
+        padding: 5px;
+    }
+    #player  {
+        font-size: 25px;
+    }
+    
+    #dealer {
+        font-size: 25px;
+    }
 
+    .container {
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+    #hit-btn {
+        width: 30%;
+        font-size: 20px;
+    }
+    
+    #stay-btn {
+        width: 30%;
+        font-size: 20px;
+    }
+    
+    #newGame-btn {
+        width: 30%;
+        font-size: 20px;
+    }
+
+    a{
+        width: 30%;
+    }
+    #return-btn {
+        font-size: 14px;
+    }
+    footer{
+        font-size: 10px;
+    }
+  }
+  

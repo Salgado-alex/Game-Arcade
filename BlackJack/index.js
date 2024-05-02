@@ -1,27 +1,28 @@
-var playerFirstCard 
-var playerSecondCard
-var dealerFirstCard 
-var dealerSecondCard
+// Delcaring all varaibles that I will use
+let playerFirstCard 
+let playerSecondCard
+let dealerFirstCard 
+let dealerSecondCard
 let playerArrCards = [];
 let dealerArrCards = [];
 let playerSum = 0;
 let dealerSum = 0;
-var hasBlackJack = false
-var isAlive = true
-var message = ""
+let hasBlackJack = false
+let isAlive = true
+let message = ""
 
-// need to use # to select id in querySelector and . to select class in querySelector
-var messageEl = document.getElementById("message-el")
-var playerSumEl = document.querySelector("#playerSum-el")
-var playerCardsEl = document.querySelector("#playerCards-el")
-var dealerSumEl = document.querySelector("#dealerSum-el")
-var dealerCardsEl = document.querySelector("#dealerCards-el")
-var newGameEl = document.querySelector("#newGame-el");
+// Need to use # to select id in querySelector and . to select class in querySelector
+let messageEl = document.getElementById("message-el")
+let playerSumEl = document.querySelector("#playerSum-el")
+let playerCardsEl = document.querySelector("#playerCards-el")
+let dealerSumEl = document.querySelector("#dealerSum-el")
+let dealerCardsEl = document.querySelector("#dealerCards-el")
+let newGameEl = document.querySelector("#newGame-el");
 
-//Function that generates a random card
+// Function that generates a random card
 function getRandomCard() {
     // The outer Math.floor function rounds the number down to the nearest whole number and the inner Math.random function generates a random number between 1 and 10
-    var randomCard = Math.floor(Math.random() * 13) + 1
+    let randomCard = Math.floor(Math.random() * 13) + 1
     // If the new card is 1(ACE), return 11
     if (randomCard === 1) {
         return 11
@@ -35,8 +36,6 @@ function getRandomCard() {
     }           
 }
 
-// newGameEl.addEventListener('click', restartGame);
-
 // Restarts new game
 function restartGame() {
     playerFirstCard = 0;
@@ -48,13 +47,13 @@ function restartGame() {
     playerSum = 0;
     dealerSum = 0;
     hasBlackJack = false;
-    isAlive = true; // Reset isAlive to true
+    isAlive = true; 
     message = "";
-    startGame(); // Start a new game
+    startGame(); 
     dealerSumEl.textContent = "Sum: "
 }
 
-//Function that starts the game
+// Function that starts the game
 function startGame() {
     playerFirstCard = getRandomCard()
     playerSecondCard = getRandomCard()
@@ -71,6 +70,7 @@ function startGame() {
 
 //Function that renders the game
 function renderGame() {
+    // Renders random cards to player and dealer
     let playerCardsText = "Cards: ";
     for(let i = 0; i < playerArrCards.length; i++){
         playerCardsText += playerArrCards[i] + " ";
@@ -83,10 +83,11 @@ function renderGame() {
 //Function that draws a new card
 function hit() {
     if (!isAlive || hasBlackJack) return;
-        var addCard = getRandomCard();
+        // Gives card to player if hit is pressed
+        let addCard = getRandomCard();
         playerArrCards.push(addCard);
         playerSum += addCard;
-
+        // Player sum is greater than 21 he is out of the game
         if (playerSum > 21) {
             message = "You're out of the game!";
             isAlive = false;
@@ -94,9 +95,10 @@ function hit() {
     renderGame()
 }
 
+// Function that determines how many more cards thw dealer will get until he reaches 17 or more
 function stay() {
+    // Checks if game is still going on
     if (!isAlive || hasBlackJack) return;
-
     // Dealer logic
     while (dealerSum < 17) {
         let addCard = getRandomCard();
@@ -106,7 +108,10 @@ function stay() {
     determineWinner();
 }
 
+// Determines who wins
+// Gets called when stay is pressed
 function determineWinner() {
+    // prints out dealers cards
     let dealerCardsT = "Cards: ";
     dealerCardsEl.textContent = " "
     for(let i = 0; i < dealerArrCards.length; i++){
@@ -114,7 +119,7 @@ function determineWinner() {
     }
     dealerCardsEl.textContent = dealerCardsT
     dealerSumEl.textContent = "Sum: " + dealerSum
-
+    // determines who wins
     if (playerSum > 21) {
         message = "You're out of the game!";
     } else if (dealerSum > 21 || dealerSum < playerSum) {
