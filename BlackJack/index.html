@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <Header>
+        <h1 id="title">Blackjack</h1>
+
+    </Header>
+
+
+      <p id="message-el">Want to play a round of Blackjack?</p>
+    <div class="container">
+        <div class="Players">
+        <p>Player</p>
+        <p id="cards-el">Cards: </p>
+        <p id="sum-el">Sum: </p>
+        <p id="player-el"></p>
+         </div>
+        
+         <div class="Players">
+            <p>Dealer</p>
+            <p id="cards-el">Cards: </p>
+            <p id="sum-el">Sum: </p>
+        </div>
+        
+    </div>
+
+    <div class="button-row">
+        <button id="start-btn" onclick="startGame()">START GAME</button>
+        <button id="new-card-btn" onclick="newCard()">NEW CARD</button>
+    </div>
+
+   
+    <script src="index.js"></script> 
+    
+</body>
+ 
+</html>

@@ -1,7 +1,7 @@
 header {
-  font-size: 15px;
+  /* font-size: 15px;
   display: flex;
-  align-items: center;
+  align-items: center; */
 }
 
 header h1 a {
@@ -135,12 +135,16 @@ body {
 
 @media (max-width: 650px) {
   header {
-    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+    margin: none;
+    padding: none;
   }
 
   header h1 a {
-    margin-left: 10px;
-    font-size: 25px;
+    font-size: 20px;
+    text-align: center;
+    margin: none;
   }
 
   .content-box {
