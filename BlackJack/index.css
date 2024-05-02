@@ -1,45 +1,112 @@
 body {
     font-family: 'DM Serif Display', serif;
     font: bold;
-    background-image: url(images/bg-bjboard.jpeg);
+    background-image: url(images/10081440.jpg);
     background-size: cover;
     color: white;
 }
+
+#title {
+    color: pink;
+    text-align: center;
+    font-size: 120px;
+    margin-top: 0;
+}
+
+#message-el{
+    text-align: center;
+    font-size: 70px;
+}
+#player  {
+    font-size: 55px;
+}
+
+#dealer {
+    font-size: 55px;
+}
+
 .container {
     display: flex;
     flex-direction: row; 
     align-items: center;
     justify-content: space-evenly;
+    margin-bottom: 3%;
+    font-size: 40px;
 }
 
-#title {
-    color: goldenrod;
+.button-row{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+#hit-btn {
+    background-color: pink;
+    color: purple;
+    cursor: pointer;
+    width: 11.5%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 2px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#stay-btn {
+    background-color: pink;
+    color: purple;
+    cursor: pointer;
+    width: 11.5%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 2px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#newGame-btn {
+    background-color: pink;
+    color: purple;
+    cursor: pointer;
+    width: 11.5%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 2px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+a{
+    background-color: pink;
+    color: purple;
+    cursor: pointer;
+    width: 11.5%;
+    padding-top: 5px;
+    padding-bottom: 5px;
     text-align: center;
 }
-#start-btn {
-    background-color: goldenrod;
-    color: green;
+#return-btn {
+    background-color: pink;
+    color: purple;
     cursor: pointer;
-    width: 100%;
     padding-top: 5px;
     padding-bottom: 5px;
-    font-weight: bold;
     border: none;
     border-radius: 2px;
-    margin-bottom: 8px;
+    font-size: 25px;
+    font-weight: bold;
+   
 }
 
-#new-card-btn {
-    background-color: goldenrod;
-    color: green;
-    cursor: pointer;
-    width: 100%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-weight: bold;
-    border: none;
-    border-radius: 2px;
-    
+footer {
+    margin-top: 2%;
+    text-align: center;
 }
 
 

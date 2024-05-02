@@ -1,28 +1,22 @@
-var firstCard 
-var secondCard
-var arrCards = []
-var sum = 0
+var playerFirstCard 
+var playerSecondCard
+var dealerFirstCard 
+var dealerSecondCard
+let playerArrCards = [];
+let dealerArrCards = [];
+let playerSum = 0;
+let dealerSum = 0;
 var hasBlackJack = false
-var isAlive = false
+var isAlive = true
 var message = ""
 
-var messageEl = document.getElementById("message-el")
-//var sumEl = document.getElementById("sum-el")
 // need to use # to select id in querySelector and . to select class in querySelector
-var sumEl = document.querySelector("#sum-el")
-var cardsEl = document.querySelector("#cards-el")
-var chipsEL = document.querySelector("#chips-el")
-var playerEl = document.querySelector("#player-el")
-
-//object store data in-depth
-//key-value pairs
-var player = {
-//  Key     value 
-    name: "Brayan",
-    chips: "145"
-}
-
-
+var messageEl = document.getElementById("message-el")
+var playerSumEl = document.querySelector("#playerSum-el")
+var playerCardsEl = document.querySelector("#playerCards-el")
+var dealerSumEl = document.querySelector("#dealerSum-el")
+var dealerCardsEl = document.querySelector("#dealerCards-el")
+var newGameEl = document.querySelector("#newGame-el");
 
 //Function that generates a random card
 function getRandomCard() {
@@ -41,55 +35,96 @@ function getRandomCard() {
     }           
 }
 
+// newGameEl.addEventListener('click', restartGame);
+
+// Restarts new game
+function restartGame() {
+    playerFirstCard = 0;
+    playerSecondCard = 0;
+    dealerFirstCard = 0;
+    dealerSecondCard = 0;
+    playerArrCards = [];
+    dealerArrCards = [];
+    playerSum = 0;
+    dealerSum = 0;
+    hasBlackJack = false;
+    isAlive = true; // Reset isAlive to true
+    message = "";
+    startGame(); // Start a new game
+    dealerSumEl.textContent = "Sum: "
+}
+
 //Function that starts the game
 function startGame() {
-    isAlive = true
-    firstCard = getRandomCard()
-    secondCard = getRandomCard()
-    arrCards = [firstCard, secondCard]
-    sum = firstCard + secondCard
+    playerFirstCard = getRandomCard()
+    playerSecondCard = getRandomCard()
+    dealerFirstCard = getRandomCard()
+    dealerSecondCard = getRandomCard()
+    playerArrCards = [playerFirstCard, playerSecondCard]
+    dealerArrCards = [dealerFirstCard, dealerSecondCard]
+    playerSum = playerFirstCard + playerSecondCard
+    dealerSum = dealerFirstCard + dealerSecondCard
+    let dealerCardsText = "Cards: ";
+    dealerCardsEl.textContent = dealerCardsText + dealerArrCards[0] + ' *' ;
     renderGame()
 }
 
 //Function that renders the game
 function renderGame() {
-    cardsEl.textContent = "Cards: "
-
-    for(var i = 0; i < arrCards.length; i++){
-        cardsEl.textContent += arrCards[i] + " "
+    let playerCardsText = "Cards: ";
+    for(let i = 0; i < playerArrCards.length; i++){
+        playerCardsText += playerArrCards[i] + " ";
     }
-    sumEl.textContent = "Sum: " + sum
-
-    if (sum <= 20) {
-        message = ("Do you want to draw a new card?")
-    } 
-    else if (sum === 21) {
-        message = ("Wohoo! You've got Blackjack!")
-        hasBlackJack = true
-    }
-    else {
-        message = ("You're out of the game!")
-        isAlive = false
-    }
-    messageEl.textContent = message
-    playerEl.textContent = player.name + ": $" + player.chips
+    playerCardsEl.textContent = playerCardsText;
+    playerSumEl.textContent = "Sum: " + playerSum;
+    messageEl.textContent = message;
 }
 
 //Function that draws a new card
-function newCard() {
-    //Edge cases
-    if (arrCards.length < 2){
-        return 0
+function hit() {
+    if (!isAlive || hasBlackJack) return;
+        var addCard = getRandomCard();
+        playerArrCards.push(addCard);
+        playerSum += addCard;
+
+        if (playerSum > 21) {
+            message = "You're out of the game!";
+            isAlive = false;
+        }
+    renderGame()
+}
+
+function stay() {
+    if (!isAlive || hasBlackJack) return;
+
+    // Dealer logic
+    while (dealerSum < 17) {
+        let addCard = getRandomCard();
+        dealerArrCards.push(addCard);
+        dealerSum += addCard;
     }
-    else if(hasBlackJack === true || isAlive === false){
-        return 0
+    determineWinner();
+}
+
+function determineWinner() {
+    let dealerCardsT = "Cards: ";
+    dealerCardsEl.textContent = " "
+    for(let i = 0; i < dealerArrCards.length; i++){
+        dealerCardsT += dealerArrCards[i] + " ";
     }
-    else{
-        let addCard = getRandomCard()
-        sum += addCard
-        arrCards.push(addCard)
-        renderGame()
+    dealerCardsEl.textContent = dealerCardsT
+    dealerSumEl.textContent = "Sum: " + dealerSum
+
+    if (playerSum > 21) {
+        message = "You're out of the game!";
+    } else if (dealerSum > 21 || dealerSum < playerSum) {
+        message = "You win!";
+    } else if (dealerSum === playerSum) {
+        message = "It's a draw!";
+    } else {
+        message = "Dealer wins!";
     }
+    renderGame();
 }
 
 
