@@ -24,23 +24,16 @@ header {
 
 h1 {
   font-size: 100px;
-  background: linear-gradient(to right, #b100f7, #334efc);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: animate 5s ease infinite;
-  text-align: center;
   font-family: "Bungee Shade", sans-serif;
   text-align: center;
+  background-image: linear-gradient(to left, #0026e7, #f521e3);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
-@keyframes animate {
-  from {
-    -webkit-filter: hue-rotate(0deg);
-  }
-  to {
-    -webkit-filter: hue-rotate(-360deg);
-  }
-}
+
 body {
   margin: 0;
   background-image: url(img/MainBG.jpg);
