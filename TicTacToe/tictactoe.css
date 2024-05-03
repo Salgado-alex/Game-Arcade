@@ -140,6 +140,10 @@ footer {
 }
 
 @media(max-width: 600px){
+
+  body{
+    overflow: visible;
+  }
   #gameContainer{
     padding: 2px;
     text-align: center;
