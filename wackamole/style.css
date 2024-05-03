@@ -8,7 +8,7 @@ html {
 }
 
 body {
-	background-image: url('images/background.svg');
+	background: radial-gradient(#130237, #AE0EA0);
 	height: 100%;
 	font-family: WaltographRegular;
 	color: #ffffff;
@@ -51,14 +51,14 @@ body {
 }
 
 #play-btn {
-	background-color: red;
+	background-color: pink;
 	padding: 40px;
 	font-size: 30px;
-	color: #ffffff;
+	color: purple;
 }
 
 #stop-btn {
-	background-color: orange;
+	background-color: red;
 	padding: 40px;
 	font-size: 30px;
 	color: #ffffff;
@@ -100,4 +100,23 @@ body {
 .footer {
 	grid-column: auto/span 1;
 	font-size: 40px;
+}
+
+#return-btn {
+	margin-top: 15px;
+    background-color: pink;
+    color: purple;
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 2px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    color: white;
+	padding-bottom: 10px;
 }

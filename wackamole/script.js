@@ -84,8 +84,6 @@ function countDown(){
 	}
 }
 
-
-
 	
 let timeId = setInterval(countDown, 1000)
 
