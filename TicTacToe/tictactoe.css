@@ -1,6 +1,7 @@
 body {
   font-family: monospace;
-  background-image: url(images/bgtict.jpg);
+  /* Cited: https://www.freepik.com/free-vector/realistic-neon-lights-background_15549592.htm#fromView=search&page=1&position=0&uuid=350dc686-d6f8-4cf7-b945-ef7320d365c9 */
+  background-image: url(images/TicBG.jpg);
   text-align: center;
   margin: 0;
   padding: 0;
@@ -27,13 +28,9 @@ header h1 a {
   transition: color 0.3s;
 }
 
-/* header h1 a:hover {
-  color: white;
-} */
-
 #gameContainer {
   padding: 30px;
-  background: radial-gradient(black , rgb(0, 217, 255));
+  background: radial-gradient(purple, #595efcaa);
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.854);
   max-width: 400px;

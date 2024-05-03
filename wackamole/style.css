@@ -1,5 +1,5 @@
 @font-face {
-	font-family: WaltographRegular;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	src: url(font/waltograph42.otf);
 }
 
@@ -117,6 +117,6 @@ body {
 
 footer {
     text-align: center;
-    color: white;
+    color: pink;
 	padding-bottom: 10px;
 }

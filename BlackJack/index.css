@@ -1,6 +1,7 @@
 body {
     font-family: 'DM Serif Display', serif;
     font: bold;
+    /* Cited: https://www.freepik.com/free-vector/flat-design-poker-table-background_94956222.htm#fromView=search&page=1&position=6&uuid=ccc62cff-b60c-46dc-b334-1a9b8274a262 */
     background-image: url(images/BlackJackBG.jpg)  ;
     background-size: cover;
     color: white;
