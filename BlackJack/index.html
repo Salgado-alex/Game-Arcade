@@ -1,51 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Head -->
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!-- Title -->
-      <title>Blackjack</title>
-      <!-- Link css -->
-      <link rel="stylesheet" href="index.css">
-      <!-- Link google fonts -->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
-   </head>
-   <!-- Body -->
-   <body>
+  <!-- Head -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>Blackjack</title>
+    <!-- Link css -->
+    <link rel="stylesheet" href="index.css" />
+    <!-- Link google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <!-- Body -->
+  <body>
     <!-- Header -->
-      <header>
-         <h1 id="title">Blackjack</h1>
-      </header>
-      <!-- Main section -->
-      <main>
-         <p id="message-el">Want to play a round of Blackjack?</p>
-         <div class="container">
-            <div class="players">
-               <p id="player">Player:</p>
-               <p id="playerCards-el">Cards: </p>
-               <p id="playerSum-el">Sum: </p>
-            </div>
-            <div class="players">
-               <p id="dealer">Dealer:</p>
-               <p id="dealerCards-el">Cards: </p>
-               <p id="dealerSum-el">Sum: </p>
-            </div>
-         </div>
-         <div class="button-row">
-            <button id="newGame-btn" onclick="restartGame()">NEW GAME</button>
-            <button id="hit-btn" onclick="hit()">HIT</button>
-            <button id="stay-btn" onclick="stay()">STAY</button>
-            <a href="../Home/index.html"><button id="return-btn">NEON ARCADE</button></a>
-         </div>
-      </main>
-      <!-- Footer -->
-      <footer>
-         <p>Copyright © 2024 Neon Arcade</p>
-      </footer>
-      <!-- Js connect -->
-      <script src="index.js"></script> 
-   </body>
+    <header>
+      <h1 id="title">Blackjack</h1>
+    </header>
+    <!-- Main section -->
+    <main>
+      <p id="message-el">Want to play a round of Blackjack?</p>
+      <div class="container">
+        <div class="players">
+          <p id="player">Player:</p>
+          <p id="playerCards-el">Cards:</p>
+          <p id="playerSum-el">Sum:</p>
+        </div>
+        <div class="players">
+          <p id="dealer">Dealer:</p>
+          <p id="dealerCards-el">Cards:</p>
+          <p id="dealerSum-el">Sum:</p>
+        </div>
+      </div>
+      <div class="button-row">
+        <button id="newGame-btn" onclick="restartGame()">NEW GAME</button>
+        <button id="hit-btn" onclick="hit()">HIT</button>
+        <button id="stay-btn" onclick="stay()">STAY</button>
+        <a href="../index.html"><button id="return-btn">NEON ARCADE</button></a>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <p>Copyright © 2024 Neon Arcade</p>
+    </footer>
+    <!-- Js connect -->
+    <script src="index.js"></script>
+  </body>
 </html>
