@@ -1,3 +1,7 @@
+/*
+Author: Daryl Posnett
+*/
+
 body {
   font-family: monospace;
   /* Cited: https://www.freepik.com/free-vector/realistic-neon-lights-background_15549592.htm#fromView=search&page=1&position=0&uuid=350dc686-d6f8-4cf7-b945-ef7320d365c9 */
@@ -7,7 +11,7 @@ body {
   padding: 0;
   min-height: 100vh;
   overflow-x: hidden;
-  overflow-y: auto; 
+  overflow-y: auto;
   background-position: center;
 }
 
@@ -28,7 +32,7 @@ header h1 a {
   color: white;
   transition: color 0.3s;
 }
-a:hover{
+a:hover {
   color: purple;
 }
 
@@ -78,7 +82,7 @@ a:hover{
 }
 
 .cell {
-  background: radial-gradient( #6790bb, #202a36ac);
+  background: radial-gradient(#6790bb, #202a36ac);
   border: 2px solid #333;
   border-radius: 15%;
   font-size: 48px;
@@ -140,31 +144,30 @@ footer {
   font-size: 15px;
 }
 
-@media(max-width: 600px){
-  #gameContainer{
+@media (max-width: 600px) {
+  #gameContainer {
     padding: 2px;
     text-align: center;
   }
-  .cell{
+  .cell {
     height: 50px;
-
   }
 
-  .board{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Creates a 3x3 grid */
-  gap: 10px; /* Space between cells */
-  margin: 20px auto; /* Centering the grid */
-  max-width: 200px; /* Restricting the maximum width of the grid */
-}
-
-#restartButton {
-  font-size: 15px;
-  padding: 5px;
-  margin-bottom: 10px;
-}
-
-#resultDisplay {
-  font-size: 18px;
-}
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates a 3x3 grid */
+    gap: 10px; /* Space between cells */
+    margin: 20px auto; /* Centering the grid */
+    max-width: 200px; /* Restricting the maximum width of the grid */
   }
+
+  #restartButton {
+    font-size: 15px;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+
+  #resultDisplay {
+    font-size: 18px;
+  }
+}

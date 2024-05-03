@@ -1,3 +1,7 @@
+/*
+Author: Daryl Posnett
+*/
+
 const cells = document.querySelectorAll(".cell");
 let currentPlayer = "X"; // Player X is always the human
 let gameActive = true;
@@ -139,7 +143,7 @@ function togglePlayer() {
 function checkWinner() {
   // if the board is such that the same board state exists
   // in a winning conndition, then that player has won the game
-  
+
   for (let condition of winningConditions) {
     const [a, b, c] = condition.map((index) => gameState[index]);
     if (a && a === b && b === c) {
