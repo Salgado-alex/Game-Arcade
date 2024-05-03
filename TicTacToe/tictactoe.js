@@ -75,7 +75,6 @@ function handleCellClick(clickedCellEvent) {
 
   // we respond to a click by handling the cell that has been played
   // and then updating the overall game status
-  //
   handleCellPlayed(clickedCell, clickedCellIndex);
   updateGameStatus();
 }
@@ -140,7 +139,7 @@ function togglePlayer() {
 function checkWinner() {
   // if the board is such that the same board state exists
   // in a winning conndition, then that player has won the game
-  //
+  
   for (let condition of winningConditions) {
     const [a, b, c] = condition.map((index) => gameState[index]);
     if (a && a === b && b === c) {
@@ -150,7 +149,6 @@ function checkWinner() {
 
   // if there are no longer any cells with no X or O
   // then there are no more empty cells to play
-  //
   if (!gameState.includes("")) {
     return "tie"; // Game is a draw
   }
@@ -158,7 +156,6 @@ function checkWinner() {
 }
 
 // The simplest computer move, just pick a random cell
-//
 function randomComputerMove() {
   let availableCells = [];
   gameState.forEach((cell, index) => {

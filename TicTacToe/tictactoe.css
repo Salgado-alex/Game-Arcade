@@ -1,22 +1,24 @@
 body {
   font-family: monospace;
-  background: radial-gradient(#130237, #AE0EA0);
+  background-image: url(images/bgtict.jpg);
   text-align: center;
   margin: 0;
   padding: 0;
   min-height: 100vh;
   overflow: hidden;
+  background-position: center;
 }
 
 header {
   display: flex;
   align-items: center;
+  margin-bottom: 150px;
 }
 
 header h1 {
   font-size: 30px;
   margin-right: auto;
-  margin-left: 30px;
+  margin-left: 50px;
 }
 
 header h1 a {
@@ -31,11 +33,12 @@ header h1 a {
 
 #gameContainer {
   padding: 30px;
-  background: linear-gradient(to bottom, #18283b, #3e6fa7, #222e3c7e);
+  background: radial-gradient(black , rgb(0, 217, 255));
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.854);
   max-width: 400px;
   margin: 40px auto;
+  padding-top: 30px;
 }
 .game-play-area h2 {
   font-size: 25px;
@@ -74,7 +77,7 @@ header h1 a {
 }
 
 .cell {
-  background: linear-gradient(to bottom, #142f4e, #6790bb, #202a36ac);
+  background: radial-gradient( #6790bb, #202a36ac);
   border: 2px solid #333;
   border-radius: 15%;
   font-size: 48px;
@@ -136,3 +139,32 @@ footer {
   padding: 20px;
   width: 100%;
 }
+
+@media(max-width: 600px){
+  #gameContainer{
+    padding: 2px;
+    text-align: center;
+  }
+  .cell{
+    height: 50px;
+
+  }
+
+  .board{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates a 3x3 grid */
+  gap: 10px; /* Space between cells */
+  margin: 20px auto; /* Centering the grid */
+  max-width: 200px; /* Restricting the maximum width of the grid */
+}
+
+#restartButton {
+  font-size: 15px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+#resultDisplay {
+  font-size: 18px;
+}
+  }
