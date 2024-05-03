@@ -1,6 +1,4 @@
-html {
-  background-color: purple;
-}
+
 /* Font from google */
 .bungee-shade-regular {
   font-family: "Bungee Shade", sans-serif;
@@ -40,7 +38,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden; /* Hide horizontal overflow */
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .container {
@@ -128,7 +127,6 @@ a:visited {
   }
   body {
     background: radial-gradient(#130237, #ae0ea0);
-    overflow: visible;
   }
   .card {
     width: 200px;

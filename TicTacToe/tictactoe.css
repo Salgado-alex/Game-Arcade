@@ -6,7 +6,8 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto; 
   background-position: center;
 }
 
@@ -140,10 +141,6 @@ footer {
 }
 
 @media(max-width: 600px){
-
-  body{
-    overflow: visible;
-  }
   #gameContainer{
     padding: 2px;
     text-align: center;
