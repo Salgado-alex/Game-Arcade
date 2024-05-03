@@ -33,7 +33,7 @@ Whack-a-Mole offers fast-paced fun as you try to whack as many moles as possible
 
 ## How to Play
 
-Simply visit [Neon Arcade]() to start playing! Choose from our selection of games and dive into the neon-lit world of online arcade entertainment.
+Simply visit [Neon Arcade](https://salgado-alex.github.io/Game-Arcade/) to start playing! Choose from our selection of games and dive into the neon-lit world of online arcade entertainment.
 
 ## About
 
