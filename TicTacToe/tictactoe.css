@@ -27,6 +27,9 @@ header h1 a {
   color: white;
   transition: color 0.3s;
 }
+a:hover{
+  color: purple;
+}
 
 #gameContainer {
   padding: 30px;
